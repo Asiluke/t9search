@@ -11,7 +11,7 @@ int main(int argc, char *argv[] ) {
 
     printf(" %d %s!\n",argc, argv[1]);
 
-    for(int a = 0; a <= 3;a++){
+    for(int a = 0; a <= 42;a++){
         int vys;
         scanf("%s",c);
         printf("%s\n",c);
