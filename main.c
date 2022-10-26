@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include<string.h>
 
 
 
@@ -7,21 +7,31 @@
 
 int main(int argc, char *argv[] ) {
 
-    char c[100];
 
+
+
+
+    char a[126][101];
+    char pomocna[100];
+    // int count = 1;
     printf(" %d %s!\n",argc, argv[1]);
-
-    for(int a = 0; a <= 42;a++){
-        int vys;
-        scanf("%s",c);
-        printf("%s\n",c);
-        vys = strcmp(c,argv[1]);
-        if(vys==0)printf("Hledany kontakt je %s\n",c);
-        else printf  ("Zadane cislo neodpovida zadnemu kontaktu\n");
-
+    for(int b = 0; b < 126;b++){
+        scanf("%s",pomocna);
+        strcpy(a[b], pomocna );
 
 
     }
+
+    for(int b = 0; b < 126;b++){int porovnani;
+        //if (count > 3)count = 1;
+
+        porovnani =  strcmp(a[b],argv[1] );
+        if(porovnani==0)printf("Kontakt je %s %s \n%s ",a[b-1],a[b-2],a[b]);
+        //count++;
+    }
+
+
+
 
 
 
